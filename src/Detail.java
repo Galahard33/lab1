@@ -1,6 +1,4 @@
-/**
- * Class representing a detail with form, material, weight and size
- */
+
 public class Detail {
     private final Form form;
     private final Material material;
@@ -21,42 +19,22 @@ public class Detail {
         this.size = size;
     }
 
-    /**
-     * Gets the form of the detail
-     * @return form enum
-     */
     public Form getForm() {
         return form;
     }
 
-    /**
-     * Gets the material of the detail
-     * @return material enum
-     */
     public Material getMaterial() {
         return material;
     }
 
-    /**
-     * Gets the weight of the detail
-     * @return weight in grams
-     */
     public double getWeight() {
         return weight;
     }
 
-    /**
-     * Gets the size of the detail
-     * @return size in millimeters
-     */
     public double getSize() {
         return size;
     }
 
-    /**
-     * Returns string representation of the detail
-     * @return formatted string with detail properties
-     */
     @Override
     public String toString() {
         return String.format("Detail{form=%s, material=%s, weight=%.2fg, size=%.2fmm}",

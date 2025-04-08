@@ -1,9 +1,6 @@
-/**
- * Demo application for Detail and DetailContainer classes
- */
+
 public class Main {
     public static void main(String[] args) {
-        // Create container
         DetailContainer container = new DetailContainer();
 
         // Add 10 different details
@@ -18,17 +15,13 @@ public class Main {
         container.addDetail(new Detail(Form.RECTANGLE, Material.PLASTIC, 15.0, 20.0));
         container.addDetail(new Detail(Form.CIRCLE, Material.COPPER, 22.0, 15.0));
 
-        // Print all details
         System.out.println(container);
 
-        // 1.3 Calculate total weight for circle form
         double circleWeight = container.getTotalWeightByForm(Form.CIRCLE);
         System.out.printf("Общий вес деталей круглой формы: %.2fg%n", circleWeight);
 
-        // 1.4 Print total number of details
         System.out.println("Количество деталей: " + container.getDetailCount());
 
-        // 1.5 Find detail with unique form
         Detail uniqueFormDetail = container.findUniqueFormDetail();
         if (uniqueFormDetail != null) {
             System.out.println("Деталь с уникальной формой: " + uniqueFormDetail);
